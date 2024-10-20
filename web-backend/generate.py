@@ -5,11 +5,6 @@ from transformers import BertLMHeadModel, BertTokenizer, GPT2LMHeadModel, GPT2To
 import re
 import jieba.posseg as pseg
 
-# Load the BERT tokenizer and model
-# model_name = r"C:\Users\ziyix\Desktop\poetry-generator\backend\models\fine_tuned_model_4"
-# model = GPT2LMHeadModel.from_pretrained(model_name, ignore_mismatched_sizes=True)
-# tokenizer = GPT2Tokenizer.from_pretrained(model_name)
-
 class SentenceCompletionCriteria(StoppingCriteria):
     def __init__(self, tokenizer, start_length):
         self.tokenizer = tokenizer
@@ -24,8 +19,8 @@ class SentenceCompletionCriteria(StoppingCriteria):
     
 class PoemGenerator:
     def __init__(self):
-        self.model = GPT2LMHeadModel.from_pretrained(r"/mnt/c/Users/ziyix/Desktop/poetry-generator/web-backend/models/fine_tuned_model_5")
-        self.tokenizer = BertTokenizer.from_pretrained(r"/mnt/c/Users/ziyix/Desktop/poetry-generator/web-backend/models/fine_tuned_model_5")
+        self.model = GPT2LMHeadModel.from_pretrained(r"./models/fine_tuned_model_5")
+        self.tokenizer = BertTokenizer.from_pretrained(r"./models/fine_tuned_model_5")
         self.model.resize_token_embeddings(len(self.tokenizer))
 
 
