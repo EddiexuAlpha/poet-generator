@@ -64,7 +64,7 @@ def load_and_preprocess_poems(file_path):
     return poems
 
 # 上传并加载诗歌数据文件
-file_path = r"C:\Users\ziyix\Desktop\poetry-generator\backend\output.txt"  # 获取文件路径
+file_path = r".\poetry-generator\backend\output.txt"  # 获取文件路径
 
 # 预处理诗歌数据
 poems = load_and_preprocess_poems(file_path)
@@ -75,5 +75,5 @@ print("开始微调 GPT-2 模型...")
 train_gpt2_model(poems)
 
 # 保存微调后的模型和 tokenizer
-model.save_pretrained(r"C:\Users\ziyix\Desktop\poetry-generator\backend\models\fine_tuned_model_2")
-tokenizer.save_pretrained(r"C:\Users\ziyix\Desktop\poetry-generator\backend\models\fine_tuned_model_2")
+model.save_pretrained(r".\poetry-generator\backend\models\fine_tuned_model_2")
+tokenizer.save_pretrained(r".\poetry-generator\backend\models\fine_tuned_model_2")
