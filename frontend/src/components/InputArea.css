@@ -1,0 +1,22 @@
+.input-area {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-area input {
+    flex: 1;
+    margin-right: 0px;
+    border: none; /* Remove the border from the input area */
+}
+
+.input-area button {
+    flex-shrink: 0;
+    border: none;
+    background-color: white;
+}
