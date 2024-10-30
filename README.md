@@ -1,22 +1,22 @@
-# Poem Generator 中文现代诗生成器
+# Poem Generator - Chinese Modern Poetry Creator
 
-这是一个使用 **React** 和 **OpenAI API** 构建的中文现代诗歌生成器。用户可以通过简洁优雅的界面，输入诗歌主题，生成由 AI 创作的现代诗歌。
+This is a Chinese modern poetry generator built using **React** and the **OpenAI API**. Users can input a poetry theme through an elegant, simple interface to generate AI-created modern poetry.
 
-## 功能特色
+## Key Features
 
-- **开始页面**：带有浮现动画的欢迎页面，包含项目标题和“开始生成你的第一首AI诗歌”按钮。
-- **聊天界面**：类似于 ChatGPT 的交互界面，用户可以输入主题或关键词，AI 将生成对应的诗歌。
-- **模型选择**：支持选择不同的 OpenAI 模型，例如 `ChatGLM-6B` 和 `gpt-4`。
-- **动画效果**：使用 Framer Motion，实现界面元素的平滑动画过渡，提升用户体验。
-- **加载指示器**：在等待 AI 生成诗歌时，显示加载提示。
+- **Welcome Page**: A welcome screen with fade-in animations, project title, and a "Start generating your first AI poem" button.
+- **Chat Interface**: An interactive interface similar to ChatGPT, where users can enter themes or keywords, and the AI will generate corresponding poems.
+- **Model Selection**: Support for selecting different OpenAI models, such as `ChatGLM-6B` and `gpt-4`.
+- **Animations**: Smooth animation transitions for interface elements using Framer Motion to enhance the user experience.
+- **Loading Indicator**: Displays a loading prompt while waiting for AI to generate the poem.
 
-## 技术栈
+## Tech Stack
 
-- **前端**：React、React Router、Framer Motion
-- **后端**：Node.js、Express、OpenAI API
-- **其他**：Git LFS（用于管理大型文件）
+- **Frontend**: React, React Router, Framer Motion
+- **Backend**: Node.js, Express, OpenAI API
+- **Other**: Git LFS (for managing large files)
 
-## 项目结构
+## Project Structure
 
 ```
 project-root/
@@ -42,74 +42,74 @@ project-root/
         └── ...
 ```
 
-## 安装和运行
+## Installation and Setup
 
-### 前端
+### Frontend
 
-1. **克隆仓库**
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/your-username/poem-generator.git
    cd poem-generator
    ```
 
-2. **安装依赖项**
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **运行前端应用**
+3. **Run the frontend application**
 
    ```bash
    npm start
    ```
 
-   应用将运行在 `http://localhost:3000`。
+   The app will run on `http://localhost:3000`.
 
-### 后端
+### Backend
 
-1. **导航到 `server` 目录**
+1. **Navigate to the `server` directory**
 
    ```bash
    cd server
    ```
 
-2. **安装依赖项**
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **设置环境变量**
+3. **Set up environment variables**
 
-   在 `server` 目录下创建一个 `.env` 文件，添加您的 OpenAI API 密钥：
+   Create a `.env` file in the `server` directory, and add your OpenAI API key:
 
    ```env
    OPENAI_API_KEY=your-openai-api-key
    ```
 
-   **注意**：请勿将 `.env` 文件提交到版本控制系统中。请确保 `.gitignore` 文件中已包含 `.env`。
+   **Note**: Do not commit the `.env` file to version control. Make sure your `.gitignore` file includes `.env`.
 
-4. **运行后端服务器**
+4. **Run the backend server**
 
    ```bash
    node index.js
    ```
 
-   服务器将运行在 `http://localhost:5000`。
+   The server will run on `http://localhost:5000`.
 
-## 使用说明
+## Usage Instructions
 
-1. 打开浏览器，访问 `http://localhost:3000`。
-2. 在开始页面，点击“开始生成你的第一首AI诗歌”按钮。
-3. 在聊天界面，输入您想要的诗歌主题或内容。
-4. 选择您想使用的模型（可选）。
-5. 点击发送，等待 AI 生成诗歌。
+1. Open your browser and go to `http://localhost:3000`.
+2. On the welcome page, click "Start generating your first AI poem."
+3. In the chat interface, enter the theme or content of the poem you want.
+4. (Optional) Select the model you wish to use.
+5. Click send and wait for the AI to generate a poem.
 
-## 依赖项
+## Dependencies
 
-### 前端
+### Frontend
 
 - **react**
 - **react-dom**
@@ -117,77 +117,77 @@ project-root/
 - **framer-motion**
 - **react-markdown**
 
-### 后端
+### Backend
 
 - **express**
 - **cors**
 - **openai**
 - **dotenv**
 
-## Git LFS 配置
+## Git LFS Configuration
 
-如果您的项目包含大型文件，建议使用 Git LFS 进行管理。
+If your project includes large files, it’s recommended to use Git LFS for management.
 
-1. **安装 Git LFS**
+1. **Install Git LFS**
 
-   请根据您的操作系统，按照 [Git LFS 官方指南](https://git-lfs.github.com/) 进行安装。
+   Follow the [official Git LFS guide](https://git-lfs.github.com/) based on your operating system.
 
-2. **初始化 Git LFS**
+2. **Initialize Git LFS**
 
    ```bash
    git lfs install
    ```
 
-3. **跟踪大型文件**
+3. **Track large files**
 
    ```bash
    git lfs track "*.psd"
    ```
 
-   这将跟踪所有 `.psd` 文件。您可以根据需要更改文件类型。
+   This will track all `.psd` files. Adjust the file type as needed.
 
-4. **提交更改**
+4. **Commit changes**
 
    ```bash
    git add .gitattributes
-   git commit -m "配置 Git LFS"
+   git commit -m "Configure Git LFS"
    git push
    ```
 
-## 注意事项
+## Notes
 
-- **API 密钥安全性**：切勿在客户端代码或公共仓库中暴露您的 OpenAI API 密钥。请使用环境变量，并在服务器端调用 OpenAI API。
-- **CORS 配置**：在部署后端服务器时，确保正确配置 CORS，以允许前端应用程序访问。
-- **依赖项管理**：请确保安装了所有必要的依赖项。如果遇到问题，请检查 `package.json` 文件。
+- **API Key Security**: Never expose your OpenAI API key in client code or public repositories. Use environment variables and call the OpenAI API on the server side.
+- **CORS Configuration**: When deploying the backend server, configure CORS appropriately to allow access by the frontend application.
+- **Dependency Management**: Ensure all required dependencies are installed. If issues arise, check the `package.json` file.
 
-## 常见问题
+## FAQs
 
-### 1. 如何防止 `.env` 文件被提交到仓库？
+### 1. How can I prevent the `.env` file from being committed to the repository?
 
-请在项目根目录的 `.gitignore` 文件中添加以下内容：
+In the project root’s `.gitignore` file, add the following:
 
 ```gitignore
 # Environment Variables
 .env
 ```
 
-### 2. 克隆仓库后，如何确保 Git LFS 正常工作？
+### 2. How can I ensure Git LFS works properly after cloning the repository?
 
-请确保在克隆仓库之前已安装 Git LFS，然后执行：
+Before cloning, install Git LFS, then execute:
 
 ```bash
 git lfs install
 git clone https://github.com/your-username/poem-generator.git
 ```
 
-## 许可证
+## License
 
 [MIT License](LICENSE)
 
-## 致谢
+## Acknowledgements
 
-- 感谢 **OpenAI** 提供的强大 API，使本项目得以实现。
-- 感谢 **THU-ChatGLM** 提供的强大 API，使本项目得以实现。
-- 感谢 **React** 社区和所有开源贡献者。
+- Thanks to **OpenAI** for the powerful API that made this project possible.
+- Thanks to **THU-ChatGLM** for their powerful API, which also contributed to this project.
+- Thanks to the **React** community and all open-source contributors.
 
 ---
